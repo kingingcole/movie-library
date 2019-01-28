@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Navbar from './components/organisms/NavBar'
+import Footer from './components/organisms/Footer'
+import Home from './components/pages/Home'
+import RecommendMovie from './components/pages/RecommendMovie'
+import SingleMovie from './components/pages/SingleMovie'
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <Navbar/>
+                    <Switch>
+                        <Route exact path='/' component={Home}/>
+                        <Route path='/recommend' component={RecommendMovie}/>
+                        <Route path='/:movie_title/:movie_year' component={SingleMovie}/>
+                    </Switch>
+                    <Footer/>
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
