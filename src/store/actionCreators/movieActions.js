@@ -1,12 +1,13 @@
 import axios from 'axios'
-
+const api_key = `${process.env.REACT_APP_API_KEY}`;
 
 export const loadMoviesFromLocalAPI = () => {
 
     return dispatch => {
-        axios.get('http://127.0.0.1:8000/api/movies')
+        let url = 'https://movie-lib-backend.herokuapp.com/api/movies/';
+        // in development url = 'http://127.0.0.1:8000/api/movies'
+        axios.get(url)
             .then(res => {
-                // console.log(res.data);
                 let {data} = res;
                 dispatch(loadMoviesFromExternalAPI(data))
             })
@@ -20,7 +21,7 @@ export const loadMoviesFromExternalAPI = (movies) => {
         movies.map(movie => {
             // console.log(movie);
             let {title, year} = movie;
-            let api_url = `http://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=b11ee57d`;
+            let api_url = `http://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=${api_key}`;
             // console.log(title, year, api_url)
             axios.get(api_url)
                 .then(res => {

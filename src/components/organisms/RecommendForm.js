@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import FormSubmitBtn from '../molecules/FormSubmitBtn'
 import FormInput from '../atoms/FormInput'
 import Button from "../atoms/Button";
-import axios from 'axios'
 
 class RecommendForm extends Component {
 

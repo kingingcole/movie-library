@@ -20,7 +20,6 @@ class Home extends Component {
     };
 
     render() {
-        console.log(this.props.movies);
         let intro = this.props.movies.length ? (
             <p style={this.style} className="mx-2 text-center lead">Here are just a few of the movies I have
                 seen this year</p>
