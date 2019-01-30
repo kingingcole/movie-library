@@ -3,6 +3,6 @@ from .serializer import RecommendationSerializers
 from .models import Recommendation
 
 # Create your views here.
-class RecommendationsList(generics.ListCreateAPIView):
+class RecommendationsList(generics.ListAPIView):
     queryset = Recommendation.objects.all()
     serializer_class = RecommendationSerializers

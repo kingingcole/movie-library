@@ -3,7 +3,7 @@ from .serializer import MovieSerializzer
 from .models import Movie
 
 # Create your views here.
-class MoviesList(generics.ListCreateAPIView):
+class MoviesList(generics.ListAPIView):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializzer
     lookup_field = 'title'
