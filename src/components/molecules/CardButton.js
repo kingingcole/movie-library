@@ -7,7 +7,7 @@ const CardButton = ({title, year}) => {
     let link = `/${title}/${year}`;
     return(
         <Link to={link}>
-            <Button color='success'>More</Button>
+            <Button color='success'>More Details</Button>
         </Link>
     )
 };

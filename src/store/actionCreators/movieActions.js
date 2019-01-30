@@ -5,7 +5,8 @@ export const loadMoviesFromLocalAPI = () => {
 
     return dispatch => {
         let url = 'https://movie-lib-backend.herokuapp.com/api/movies/';
-        // in development url = 'http://127.0.0.1:8000/api/movies'
+        // in development
+        // url = 'http://127.0.0.1:8000/api/movies'
         axios.get(url)
             .then(res => {
                 let {data} = res;
@@ -21,7 +22,7 @@ export const loadMoviesFromExternalAPI = (movies) => {
         movies.map(movie => {
             // console.log(movie);
             let {title, year} = movie;
-            let api_url = `http://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=${api_key}`;
+            let api_url = `https://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=${api_key}`;
             // console.log(title, year, api_url)
             axios.get(api_url)
                 .then(res => {
@@ -44,7 +45,7 @@ export const loadMoviesFromExternalAPI = (movies) => {
 export const loadSingleMovie = (title, year) =>{
     return dispatch => {
         console.log(title, year);
-        let api_url = `http://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=b11ee57d`;
+        let api_url = `https://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=b11ee57d`;
         axios.get(api_url)
             .then(res => {
                 let {data} = res;

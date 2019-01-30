@@ -8,13 +8,12 @@ const RecommendMovie = (props) => {
         // console.log(this.state);
         axios({
             method: 'post',
-            url: 'http://localhost:8000/api/recommendations/',
+            // url: 'http://localhost:8000/api/recommendations/',
+            url: 'https://movie-lib-backend.herokuapp.com/api/recommendations/',
             headers: {'Content-Type': 'application/json'},
             data
         })
             .then(res =>{
-                console.log(res);
-                console.log(props);
                 props.history.push('/')
             })
     };

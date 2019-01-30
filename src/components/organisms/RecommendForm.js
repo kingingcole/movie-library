@@ -27,11 +27,11 @@ class RecommendForm extends Component {
         return (
             <form className='mx-auto' style={this.formStyle} onSubmit={(e) => this.props.handleSubmit(e, this.state)}>
                 <div className="form-group">
-                    <label htmlFor="movie">Movie Title</label>
+                    <label htmlFor="movie">Movie Title*</label>
                     <FormInput handleChange={this.handleChange} required type='text' id='movie' value={this.state.movie}/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="year">Year of Release/Production</label>
+                    <label htmlFor="year">Year of Release/Production*</label>
                     <FormInput handleChange={this.handleChange} required type='number' id='year' value={this.state.year}/>
                 </div>
                 <div className="form-group mb-4">
@@ -39,6 +39,9 @@ class RecommendForm extends Component {
                     <FormInput handleChange={this.handleChange} type='text' id='star_actors' value={this.state.star_actors}/>
                 </div>
                 {/*<button type="submit" className="btn btn-primary">Submit</button>*/}
+                <span>
+                    Fields marked <i>*</i> are required
+                </span>
                 <Button color='success'>Submit Movie Recommendation</Button>
             </form>
         )
