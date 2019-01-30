@@ -67,8 +67,12 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
+<<<<<<< HEAD
     'localhost:5000',
     'colemovies.herokuapp.com'
+=======
+    'https://colemovies.herokuapp.com',
+>>>>>>> 335b260435bc71a00e4d448b84fce7d11d8f8bdc
 )
 
 ROOT_URLCONF = 'backend.urls'
