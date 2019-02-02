@@ -7,9 +7,9 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-12">
                         <p className="text-center mt-2 mb-1">
-                            <a className='text-success' href="emeruchecole.herokuapp.com">Emeruche Cole</a>
+                            <a className='text-success' href="https://emeruchecole.herokuapp.com">Emeruche Cole</a>
                         </p>
-                        <p className="text-center text-light">Movie data from <a className='text-success' href="omdbapi.com">OMDbApi</a></p>
+                        <p className="text-center text-light">Movie data from <a className='text-success' href="https://omdbapi.com">OMDbApi</a></p>
                     </div>
                 </div>
             </div>
