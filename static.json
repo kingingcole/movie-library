@@ -3,5 +3,8 @@
   "routes": {
     "/**": "index.html"
   },
-  "https_only": true
+  "https_only": true,
+
+  "error_page": "errors/error.html"
+
 }
