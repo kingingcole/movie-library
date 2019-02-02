@@ -19,7 +19,7 @@ const MovieCard = ({movie}) => {
         <div className="col-6 col-md-6 col-lg-4">
             <Link to={link}>
                 <div className="card my-3 mx-auto text-center" style={cardStyle}>
-                    <CardImage imageURL={movie.Poster} height='350px'/>
+                    <CardImage imageURL={movie.Poster} height='450px'/>
                     <CardBody movie={movie}/>
                 </div>
                 <p className='text-success text-center for-small-screens' style={pStyle}>{movie.Title}</p>
