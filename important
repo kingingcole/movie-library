@@ -1,0 +1,26 @@
+Use scripts below in development and not in production:
+
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+
+Use this in production:
+
+"scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+
+omdbapi api key: b11ee57d
+
+The line below was removed from .gitignore:
+
+# production
+/build

@@ -20,6 +20,12 @@ class Home extends Component {
     };
 
     render() {
+        var http = require("http");
+        setInterval(function() {
+            http.get("https://movie-lib-backend.herokuapp.com");
+        }, 300000); // every 5 minutes (300000)
+
+
         let intro = this.props.movies.length ? (
             <p style={this.style} className="mx-2 text-center lead">Here are just a few of the movies I have
                 seen this year</p>
