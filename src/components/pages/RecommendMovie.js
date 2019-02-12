@@ -9,7 +9,7 @@ const RecommendMovie = (props) => {
         axios({
             method: 'post',
             // url: 'http://localhost:8000/api/recommendations/',
-            url: 'http://movie-lib-backend.herokuapp.com/api/recommendations/',
+            url: 'https://movie-lib-backend.herokuapp.com/api/recommendations/',
             headers: {'Content-Type': 'application/json'},
             data
         })
