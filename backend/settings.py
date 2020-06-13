@@ -70,7 +70,7 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:5000',
     'localhost:5500',
     'colemovies.herokuapp.com',
-    'colemovies-angularjs.com'
+    'colemovies-angularjs.netlify.app'
 )
 
 ROOT_URLCONF = 'backend.urls'
