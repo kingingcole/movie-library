@@ -69,7 +69,8 @@ CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
     'localhost:5000',
     'localhost:5500',
-    'colemovies.herokuapp.com'
+    'colemovies.herokuapp.com',
+    'colemovies-angularjs.com'
 )
 
 ROOT_URLCONF = 'backend.urls'
